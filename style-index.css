@@ -1,0 +1,402 @@
+/* style-indes.css */
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Bold.ttf') format('truetupe');
+    font-weight: normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-ExtraLight.ttf') format('truetupe');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #f2b705;
+}
+
+.hero {
+    background-image: url("img/hero-cao.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+
+    text-align: center;
+    color: white;
+
+    padding-bottom: 200px;
+
+    position:static;
+}
+
+.logo {
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    
+    
+}
+
+.texto-hero {
+    font-weight: bold;
+    text-shadow: 2px 1px 0px #000;
+}
+
+/* Quem Somos */
+/*
+.quem-somos {
+    background-image: url('img/Barra-quem-somos.png');
+    background-repeat: no-repeat;
+
+    background-size: 600px ;
+
+    display: flex;
+}
+*/
+.fundo-quem-somos{
+    background-image: url('img/Barra-quem-somos.png');
+    background-repeat: no-repeat;
+    background-size: 70% 450px;
+
+    padding: 0px 450px 200px 30px;
+    margin-top: 80px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.quem-somos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.titulo-quem-somos {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 30px;
+}
+
+.coluna {
+    padding: 50px 10% 300px 0px;
+    margin-left: 2%;
+
+}
+
+.coluna p{
+    text-align: justify;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.coluna h2{
+    font-size: 28px;
+    color: black;
+}
+
+.coluna p,
+.coluna h2 {
+    position: relative;
+    z-index: 3;
+}
+
+.divisor {
+    width: 2px;
+    height: 250px;
+
+    margin-bottom: 220px;
+
+    background-color: #000;
+}
+
+/* Serviços */
+
+
+.servicos {
+    background: #f2b705;
+    background-image: url('img/fundo-servicos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    position: relative;
+    z-index: 1;
+
+    color: white;
+    padding: 5% 200px 160px;
+    
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.servicos h2 {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 64px;
+}
+
+.cards {
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem;
+
+    scrollbar-width: thin;
+}
+
+.slide-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    width: 80%;
+    min-height: 400px;
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px;
+}
+
+.card h3{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 30px;
+}
+
+.card p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+
+    align-items: center;
+    text-align: center;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    transition: background-color 0.5 ease;
+
+    z-index: 1;
+}
+
+.card:hover::before{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+.card h3,
+.card p {
+    position: relative;
+    z-index: 2;
+}
+
+
+.card-agressicidade {
+    background-image: url('img/Agressividade.jpg');
+}
+
+.treino-basico{
+    background-image: url('img/Adestramento.jpg');
+}
+
+.apoio-emocional{
+    background-image: url('img/Suporte_Emocional.jpg');
+}
+
+.traumas-e-medo {
+    background-image: url('img/Traumas.jpg');
+}
+
+.whatsapp {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #25d366;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 40px auto 20px auto;
+}
+
+.whatsapp-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.whatsapp:hover{
+    background: #154b29;
+    transition: background 0.5 ease;
+}
+
+/* Pacotes */
+.pacotes{
+    background: #f2b705;
+    padding: 200px;
+}
+
+/* Rodape */
+.rodape {
+    background: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* =======================
+   RESPONSIVIDADE
+======================= */
+
+@media (max-width: 1600px){
+    .fundo-quem-somos {
+        background-size: 75% 55%;
+    }
+
+    .coluna {
+        padding: 50px 0px 300px 0px;
+        margin-left: 2%;
+    }
+
+    .servicos {
+        padding: 15% 20px 25%;
+        background-position: top;
+        background-size: 200% 100%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .hero {
+        padding-bottom: 0px;
+    }
+
+    .logo {
+        width: 50%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .servicos {
+        padding: 10% 80px 200px;
+    }
+
+    .fundo-quem-somos {
+        padding: 0px 40px 160px;
+        background-size: 100% 450px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 100%;
+        max-width: 450px;
+
+        position: center;
+    }
+
+    .hero{
+        padding-bottom: 0px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .fundo-quem-somos {
+        background-image: none;
+        background-color: #f2b705;
+        
+        padding-bottom: 10px;
+    }
+
+    .quem-somos {
+        flex-direction: column;
+        gap: 0px;
+
+ 
+    }
+
+    .divisor {
+        display: none;
+    }
+
+    .coluna {
+        padding: 5px 0px 0px 0px;
+        margin-left: 2%;
+    }
+
+
+    .servicos {
+        padding: 15% 20px 40%;
+        margin-top: 100%;
+        background-size: cover;
+    }
+
+    .atencao {
+        display: none;
+    }
+
+    .servicos h2 {
+        font-size: 42px;
+    }
+
+    .cards {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slide-card {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: thin;
+    }
+
+    .card {
+        min-height: 320px;
+        min-height: 400px;
+        flex: 0 0 80%;
+        scroll-snap-align: center;
+        border-radius: 30px;
+        box-sizing: border-box;
+        padding: 25px;
+        transition: transform 0.3s ease;
+    }
+
+    .pacotes {
+        padding: 100px 20px;
+    }
+}
